@@ -15,7 +15,7 @@ void execute_input(const char *input)
 	}
 	else if (child_pid == 0)
 	{
-		execlp(input, input, (char *)NULL);
+		execve("/bin/ls", input, (char *)NULL);
 		perror("execlp");
 		exit(EXIT_FAILURE);
 	}

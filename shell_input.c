@@ -14,7 +14,8 @@ void read_input(char *input, size_t size)
 		{
 			shell_print("\n");
 			exit(EXIT_SUCCESS);
-		}else
+		}
+		else
 		{
 			shell_print("Error while reading input.\n");
 			exit(EXIT_FAILURE);

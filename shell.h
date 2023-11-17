@@ -13,6 +13,6 @@ int main(void);
 void shell_print(const char *string);
 void display_shell_prompt(void);
 void read_input(char *input, size_t size);
-int execute_input();
+void execute_input();
 
 #endif

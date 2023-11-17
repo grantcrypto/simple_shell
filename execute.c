@@ -5,9 +5,8 @@
  * Return: void
  */
 
-void execute_input(void)
+void execute_input(const char *command)
 {
-	char *const argv[] = {"ls", NULL};
 
 	pid_t pid = fork(); /* creating child process */
 
@@ -19,8 +18,8 @@ void execute_input(void)
 	else if (pid == 0)
 	{
 		/* child process */
-		execve("/bin/ls", argv, NULL);
-		perror("execve");
+		execlp(command, command, (char *)NULL);
+		perror("./shell");
 		exit(EXIT_FAILURE);
 	}
 	else

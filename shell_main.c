@@ -13,7 +13,7 @@ int main(void)
 	{
 		display_shell_prompt();
 		read_input(input, sizeof(input));
-		execute_input();
+		execute_input(input);
 	}
 
 	return (0);

@@ -10,9 +10,8 @@
  * Return: void
  */
 
-void execute_input(const char* input)
+void execute_input(const char *input)
 {
-	
 	char *argv[] = {NULL};
 
 		pid_t pid = fork(); /* fork new process */

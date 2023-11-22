@@ -34,6 +34,4 @@ void execute_input(const char *input)
 		{
 			wait(NULL);
 		}
-
-
 }

@@ -1,3 +1,4 @@
+#include "shell.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,7 +13,7 @@
 
 void execute_input(const char *input)
 {
-	char *argv[] = {NULL};
+	char *argv[] = {"/bin/ls", NULL};
 
 		pid_t pid = fork(); /* fork new process */
 
@@ -25,10 +26,9 @@ void execute_input(const char *input)
 		{
 		if (execve(input, argv, NULL) == -1)
 		{
-		perror("execve");
-		exit(EXIT_FAILURE);
+			perror("execve");
+			exit(EXIT_FAILURE);
 		}
-		exit(EXIT_FAILURE);
 		}
 		else
 		{

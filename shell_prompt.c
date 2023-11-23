@@ -5,5 +5,5 @@
  */
 void display_shell_prompt(void)
 {
-	shell_print("crypto_shell$");
+	shell_print("");
 }
